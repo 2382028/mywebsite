@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+    <link rel="icon" href="logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="header">
+      <img src="logobintangtengah.png" alt="Logo" class="center-logo" />
+      <i
+        ><b><h1>~ Registration ~</h1></b></i
+      >
+      <img src="logobintangtengah.png" alt="Small Logo" class="right-logo" />
+    </div>
+
+    <div class="pembatas"></div>
+
+    <div class="container">
+      <!-- Sidebar for navigation -->
+      <div class="menu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Me</a></li>
+          <li><a href="myHoliday.html">My Holiday</a></li>
+          <li><a href="registration.html">Registration</a></li>
+        </ul>
+      </div>
+
+      <!-- Main Content Section -->
+      <div class="main-content">
+        <div class="registrationForm">
+          <h2>Registration Form</h2>
+          <form action="process.php" method="POST">
+            <div class="rForm-group">
+              <label for="nama">Nama</label>
+              <input type="text" id="nama" name="nama" required />
+            </div>
+            <div class="rForm-group">
+              <label for="nim">NIM</label>
+              <input type="text" id="nim" name="nim" required />
+            </div>
+            <div class="rForm-group">
+              <label for="no_hp">No HP</label>
+              <input type="tel" id="no_hp" name="no_hp" required />
+            </div>
+            <div class="rForm-group">
+              <label for="no_makan">No Makan</label>
+              <input type="number" id="no_makan" name="no_makan" required />
+            </div>
+            <button type="submit" class="btn-submit">Daftar</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Right Sidebar with social media links and favorite websites -->
+      <aside class="aside">
+        <h2>Follow Me</h2>
+        <div>
+          <a href="https://instagram.com/alleniad.nia" target="_blank">
+            <img
+              src="logoig.png"
+              alt="Instagram"
+              style="width: 40px; height: 40px"
+            />
+          </a>
+        </div>
+
+        <h2>University Websites</h2>
+        <div class="university-websites">
+          <a href="https://fti.unai.edu" target="_blank">
+            <img
+              src="logofti.png"
+              alt="FTI UNAI"
+              style="width: 80px; height: auto"
+            />
+          </a>
+          <a href="https://unai.edu" target="_blank">
+            <img
+              src="logounai.png"
+              alt="UNAI"
+              style="width: 60px; height: auto; margin-top: -30px"
+            />
+          </a>
+        </div>
+
+        <h2>My Favorite Websites</h2>
+        <div class="shadow-box">
+          <p>
+            <img
+              src="logounai.png"
+              alt="Information Logo"
+              style="width: 40px; height: auto"
+            />
+            <a href="https://online.unai.edu/" target="_blank"
+              >Information-Packed Website</a
+            >
+          </p>
+          <p>
+            <img
+              src="logopddikti.svg"
+              alt="Scholarship Logo"
+              style="width: 40px; height: auto"
+            />
+            <a href="https://pddikti.kemdikbud.go.id/" target="_blank"
+              >Websites That Provide Scholarships</a
+            >
+          </p>
+          <p>
+            <img
+              src="logoyt.png"
+              alt="YouTube Logo"
+              style="width: 40px; height: auto"
+            />
+            <a href="https://www.youtube.com/" target="_blank"
+              >Entertaining Website</a
+            >
+          </p>
+        </div>
+      </aside>
+    </div>
+
+    <footer class="footer">
+      <p>Copyright &copy; 2024</p>
+    </footer>
+  </body>
+</html>
