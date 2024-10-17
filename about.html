@@ -5,24 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nia's Websites</title>
     <link rel="icon" href="logo.png" type="image/x-icon" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
+    <!-- Header Section -->
     <div class="header">
       <img src="logobintangtengah.png" alt="Logo" class="center-logo" />
-      <i>
-        <b><h1>~ About Me ~</h1></b>
-      </i>
+      <i
+        ><b><h1>~ About Me ~</h1></b></i
+      >
       <img src="logobintangtengah.png" alt="Small Logo" class="right-logo" />
     </div>
 
-    <!-- Separator line -->
+    <!-- Separator Line -->
     <div class="pembatas"></div>
 
+    <!-- Container Section -->
     <div class="container">
       <!-- Sidebar for navigation -->
       <div class="menu">
@@ -34,54 +36,71 @@
 
       <!-- Main Content Section -->
       <div class="main-content">
-        <!-- Bungkus bagian About Me dalam div dengan styling -->
         <div class="about-section">
-          <h2>Short Bio</h2>
+          <!-- Photo with 3:4 Ratio -->
+          <h2>My Profile Picture</h2>
+          <img src="biophoto.png" alt="Profile Picture" class="profile-image" />
+
+          <h3>Short Bio</h3>
           <p>
-            Hello! Daniella Sabathini here, diving into the world of Information
-            Technology and sharing my journey with you.
+            Hello! <strong>Daniella Sabathini</strong> here, diving into the
+            world of <em>Information Technology</em> and sharing my journey with
+            you.
           </p>
 
-          <h3>My Hobbies</h3>
+          <h4>Hobbies That Keep Me Busy</h4>
           <ol>
-            <li>Photography</li>
-            <li>Coding</li>
-            <li>Traveling</li>
+            <li>
+              <h5>Photography</h5>
+              - Capturing life one frame at a time.
+            </li>
+            <li>
+              <h5>Coding</h5>
+              - Turning ideas into digital realities.
+            </li>
+            <li>
+              <h5>Traveling</h5>
+              - Exploring new cultures and places.
+            </li>
           </ol>
 
-          <h3>My Interests</h3>
+          <h4>Things I Find Fascinating</h4>
           <ul>
-            <li>Web Development</li>
-            <li>Graphic Design</li>
-            <li>Machine Learning</li>
+            <li>Web Development - Crafting beautiful, functional websites.</li>
+            <li>Graphic Design - Expressing ideas visually.</li>
+            <li>Machine Learning - Teaching machines to think.</li>
           </ul>
 
-          <h3>Favorite Movie</h3>
+          <h3>My Favorite Movie</h3>
           <p>
             I enjoy watching <strong>Inception</strong> because of its intricate
             storyline and mind-bending twists!
           </p>
+
+          <h5>Quote:</h5>
+          <h6>“Don’t call it a dream. Call it a plan.”</h6>
         </div>
       </div>
 
-     <!-- Right Sidebar or placeholder for more content -->
-<div class="aside">
-  <!-- Menambahkan Judul Lagu -->
-  <h3><i>Nothing by Bruno Major</i></h3>
+      <!-- Right Sidebar or placeholder for more content -->
+      <div class="aside">
+        <h3><i>Currently Listening To:</i></h3>
+        <img
+          src="cdnia.png"
+          alt="cdnia"
+          class="responsive-img"
+          style="width: 150px"
+        />
+        <audio controls class="audio-control">
+          <source src="lagunia.mp3" type="audio/mpeg" />
+          Your browser does not support the audio tag.
+        </audio>
+      </div>
+    </div>
 
-  <!-- Menambahkan Gambar PNG -->
-  <img src="cdnia.png" alt="cdnia" class="png-image" style="width: 150px;" />
-
-  
-  <!-- Menambahkan Audio/Lagu -->
-  <audio controls class="audio-control">
-    <source src="lagunia.mp3" type="audio/mpeg" />
-    Your browser does not support the audio tag.
-  </audio>
-</div>
-    <!-- Footer Section -->
-    <footer class="footer">
+    <!-- Footer -->
+    <div class="footerAM">
       <p><h3>ps: please try to resize the browser :)</h3></p>
-    </footer>
+    </div>
   </body>
 </html>

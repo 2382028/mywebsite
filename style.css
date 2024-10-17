@@ -1,972 +1,980 @@
 /*STYLE INDEX*/
 * {
-    box-sizing: border-box;
-  }
-  body {
-    font-family: "Libre Baskerville", serif;
-    background-image: url("background.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin: 0;
-    padding: 0;
-    color: #ffffff;
-  }
+  box-sizing: border-box;
+}
+body {
+  font-family: "Libre Baskerville", serif;
+  background-image: url("background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+}
 
+.container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative; /* Ensure proper positioning */
+}
+
+/* Menu styling */
+.menu {
+  background: rgba(0, 0, 0, 0);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  padding: 15px;
+  text-align: center; /* Center text in menu */
+}
+
+.menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  padding: 10px;
+  background-color: #eb94a2;
+  color: white;
+  margin: 10px 0; /* Add margin for better spacing */
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-size: 14px; /* Smaller font size */
+  box-shadow: 0 4px 8px rgba(214, 213, 213, 0.3); /* 3D effect */
+}
+
+.menu li:hover {
+  background-color: #663399;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Main content styling */
+.main-content {
+  text-align: center;
+}
+
+.header {
+  margin-bottom: 20px;
+  position: relative;
+  text-align: center; /* Center header content */
+}
+
+.header img {
+  width: 80px; /* Adjust logo size for mobile */
+  max-width: 100%; /* Ensure logo is responsive */
+  height: auto; /* Maintain aspect ratio */
+  position: absolute;
+  top: -10px; /* Move logos upwards */
+}
+
+.header .center-logo {
+  left: 10px; /* Move center logo to the left */
+  top: -5px;
+}
+
+.header .right-logo {
+  right: 10px; /* Move right logo to the right */
+  top: -5px;
+}
+
+h1 {
+  font-size: 30px;
+  color: #ffc0cb;
+  margin: 20px 0; /* Adjust margin for spacing */
+  text-align: center; /* Center the title */
+}
+
+/* Separator line */
+.pembatas {
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(to right, #b0c4de, #d3d3d3, #b0c4de);
+  box-shadow: 0 0 10px #ccc;
+  margin: 10px 0;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: 0 auto; /* Center content */
+}
+
+.content img {
+  max-width: 400px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.content-text {
+  max-width: 600px;
+  text-align: center;
+  margin: 0 auto; /* Center content text */
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0 20px;
+}
+
+.responsive-img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Sidebar styling */
+.asideindex {
+  background: rgba(0, 0, 0, 0);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  padding: 15px;
+  text-align: center;
+}
+/* Styling for the image */
+.asideindex img {
+  width: 100%; /* Make the image fill the container */
+  height: 100%; /* Make the image fill the container height */
+  object-fit: cover; /* Ensure the image covers the container without distortion */
+  border-radius: 8px; /* Rounded corners */
+}
+
+/* Footer styling */
+.footer {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  color: white;
+  padding: 1px; /* Increased padding */
+  text-align: center;
+  margin-top: 20px;
+  font-size: 8px; /* Adjusted font size */
+  font-style: italic;
+  width: 100%; /* Ensure footer spans full width */
+  position: relative; /* Ensure footer stays at the bottom */
+  left: 0; /* Align footer */
+}
+
+@media screen and (max-width: 768px) {
   .container {
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    grid-gap: 20px;
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-    position: relative; /* Ensure proper positioning */
-  }
-
-  /* Menu styling */
-  .menu {
-    background: rgba(0, 0, 0, 0);
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    padding: 15px;
-    text-align: center; /* Center text in menu */
-  }
-
-  .menu ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  .menu li {
-    padding: 10px;
-    background-color: #eb94a2;
-    color: white;
-    margin: 10px 0; /* Add margin for better spacing */
-    border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    font-size: 14px; /* Smaller font size */
-    box-shadow: 0 4px 8px rgba(214, 213, 213, 0.3); /* 3D effect */
-  }
-
-  .menu li:hover {
-    background-color: #663399;
-  }
-
-  .menu a {
-    color: white;
-    text-decoration: none;
-  }
-
-  /* Main content styling */
-  .main-content {
-    text-align: center;
-  }
-
-  .header {
-    margin-bottom: 20px;
-    position: relative;
-    text-align: center; /* Center header content */
+    grid-template-columns: 1fr;
+    padding: 10px; /* Adjusted padding for mobile */
   }
 
   .header img {
-    width: 80px; /* Adjust logo size for mobile */
-    max-width: 100%; /* Ensure logo is responsive */
-    height: auto; /* Maintain aspect ratio */
-    position: absolute;
-    top: -10px; /* Move logos upwards */
-  }
-
-  .header .center-logo {
-    left: 10px; /* Move center logo to the left */
-    top: -5px;
-  }
-
-  .header .right-logo {
-    right: 10px; /* Move right logo to the right */
-    top: -5px;
+    width: 80px; /* Smaller logo for mobile */
   }
 
   h1 {
-    font-size: 30px;
-    color: #ffc0cb;
-    margin: 20px 0; /* Adjust margin for spacing */
-    text-align: center; /* Center the title */
+    font-size: 24px; /* Smaller title font for mobile */
   }
 
-  /* Separator line styling */
-  .pembatas {
-    width: 100%;
-    height: 4px;
-    background: linear-gradient(
-      to right,
-      #b0c4de,
-      #d3d3d3,
-      #b0c4de
-    ); /* Silver gradient */
-    box-shadow: 0 0 10px #ccc; /* 3D shadow effect */
-    margin: 10px 0; /* Adjusted margin to move it higher */
-  }
-
-  .content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 40px 20px;
-    max-width: 800px;
-    margin: 0 auto; /* Center content */
-  }
-
-  .content img {
-    max-width: 400px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-  }
-
-  .content-text {
-    max-width: 600px;
-    text-align: center;
-    margin: 0 auto; /* Center content text */
-  }
-
-  h2 {
-    font-size: 24px;
-    margin-bottom: 15px;
-  }
-
-  p {
-    font-size: 16px;
-    line-height: 1.6;
-    margin: 0 20px;
-  }
-
-  /* Sidebar styling */
-  .aside {
-    background: rgba(0, 0, 0, 0);
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    padding: 15px;
-    text-align: center;
-  }
-
-  /* Footer styling */
   .footer {
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    color: white;
-    padding: 1px; /* Increased padding */
-    text-align: center;
-    margin-top: 20px;
-    font-size: 8px; /* Adjusted font size */
-    font-style: italic;
-    width: 100%; /* Ensure footer spans full width */
-    position: relative; /* Ensure footer stays at the bottom */
-    left: 0; /* Align footer */
+    font-size: 10px; /* Adjusted footer font size for mobile */
   }
 
-  @media screen and (max-width: 768px) {
-    .container {
-      grid-template-columns: 1fr;
-      padding: 10px; /* Adjusted padding for mobile */
-    }
-
-    .header img {
-      width: 80px; /* Smaller logo for mobile */
-    }
-
-    h1 {
-      font-size: 24px; /* Smaller title font for mobile */
-    }
-
-    .footer {
-      font-size: 10px; /* Adjusted footer font size for mobile */
-    }
-
-    .pembatas {
-      margin: 10px 0; /* Ensure separator line is centered */
-    }
-
-    .aside {
-      margin-top: 20px; /* Added margin for mobile */
-    }
+  .pembatas {
+    margin: 10px 0; /* Ensure separator line is centered */
   }
-/* Styling untuk gambar PNG */
-.png-image {
-display: block;
-margin: 30px auto; /* Jarak gambar dari elemen lainnya */
-width: 150px; /* Atur ukuran gambar PNG */
-border-radius: 10px; /* Opsional: Membuat sudut gambar menjadi lebih halus */
-}
 
-/* Styling untuk teks judul lagu */
-.aside h3 {
-text-align: center; /* Pusatkan teks judul */
-margin-top: 20px; /* Jarak dari atas ke teks */
-font-size: 18px; /* Ukuran teks judul */
-color: #ffc0cb; /* Warna teks */
-}
-.audio-control {
-display: block;
-margin: 20px auto; /* Jarak antara gambar dan audio */
-width: 100%; /* Audio akan memenuhi lebar container */
-height: 25px; /* Tinggi kotak audio agar lebih tipis */
-padding: 0; /* Tidak ada padding tambahan */
-border: none; /* Menghilangkan border untuk tampilan lebih bersih */
-background: linear-gradient(
-to right,
-#b0c4de,
-#d3d3d3,
-#b0c4de
-); /* Silver gradient */
-box-shadow: 0 4px 15px #ccc(0, 0, 0, 0.3); /* 3D shadow effect lebih besar dan gelap */
-margin: 10px 0; /* Adjusted margin to move it higher */
-border-radius: 12px; /* Membuat sudut melengkung */
-}
-
-.audio-control:hover {
-height: 30px; /* Sedikit lebih besar saat dihover */
-box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4); /* Shadow lebih besar saat dihover */
+  .asideindex {
+    margin-top: 20px; /* Added margin for mobile */
+  }
 }
 
 /*STYLE ABOUTME*/
 
-
 * {
-    box-sizing: border-box;
-  }
-  body {
-    font-family: "Libre Baskerville", serif;
-    background-image: url("background.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin: 0;
-    padding: 0;
-    color: #ffffff;
-  }
+  box-sizing: border-box;
+}
+body {
+  font-family: "Libre Baskerville", serif;
+  background-image: url("background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+}
 
+.container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Menu styling */
+.menu {
+  background: rgba(0, 0, 0, 0);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  padding: 15px;
+  text-align: center;
+}
+
+.menu div {
+  padding: 10px;
+  background-color: #eb94a2;
+  color: white;
+  margin: 10px 0;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-size: 14px;
+  box-shadow: 0 4px 8px rgba(214, 213, 213, 0.3);
+}
+
+.menu div:hover {
+  background-color: #663399;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Header and logos */
+.header {
+  margin-bottom: 20px;
+  position: relative;
+  text-align: center;
+}
+
+.header img {
+  width: 80px;
+  height: auto;
+  position: absolute;
+  top: -10px;
+}
+
+.header .center-logo {
+  left: 10px;
+  top: -5px;
+}
+
+.header .right-logo {
+  right: 10px;
+  top: -5px;
+}
+
+h1 {
+  font-size: 30px;
+  color: #ffc0cb;
+  margin: 20px 0;
+  text-align: center;
+}
+
+/* Separator line */
+.pembatas {
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(to right, #b0c4de, #d3d3d3, #b0c4de);
+  box-shadow: 0 0 10px #ccc;
+  margin: 10px 0;
+}
+
+/* Main content styling */
+.main-content {
+  text-align: center;
+}
+
+/* Styling khusus untuk bagian About Me */
+.about-section {
+  text-align: center;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Box shadow for 3D effect */
+  max-width: 800px;
+  margin: 0 auto; /* Center the About Me section */
+}
+
+.profile-image {
+  width: 100%; /* Sesuaikan dengan lebar kontainer */
+  max-width: 200px; /* Batas maksimum lebar */
+  aspect-ratio: 3 / 4; /* Tentukan rasio 3:4 */
+  object-fit: cover; /* Isi kontainer tanpa distorsi */
+  border-radius: 10px; /* Sudut sedikit melengkung */
+  margin: 0 auto 20px auto; /* Pusatkan gambar dan tambahkan margin bawah */
+  display: block; /* Blok agar img bisa diatur dengan margin */
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+  .profile-image {
+    max-width: 150px; /* Sesuaikan ukuran maksimal di layar kecil */
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #ffc0cb;
+}
+
+.about-section p,
+.about-section ul,
+.about-section ol {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #ffffff;
+  text-align: justify; /* Align text both left and right */
+}
+
+.about-section h3,
+.about-section h4,
+.about-section h5,
+.about-section h6 {
+  font-size: 20px;
+  margin-top: 20px; /* Increase top margin for better spacing */
+  margin-bottom: 10px;
+}
+
+/* Custom Styles for Ordered and Unordered Lists */
+/* Unordered List (ul) Custom Bullets */
+ul {
+  list-style-type: none;
+  padding-left: 20px;
+}
+
+ul li::before {
+  content: "• ";
+  color: #ffc0cb;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+/* Ordered List (ol) Custom Style */
+ol {
+  counter-reset: my-counter;
+  padding-left: 20px;
+}
+
+ol li {
+  counter-increment: my-counter;
+  margin-bottom: 10px;
+  padding: 5px;
+  position: relative;
+}
+
+/* Hover Effect */
+ul li:hover,
+ol li:hover {
+  background-color: rgba(255, 192, 203, 0.2);
+  border-radius: 5px;
+}
+
+/* List Styling for better spacing */
+ul li,
+ol li {
+  font-size: 14px;
+  line-height: 1.8;
+  margin-bottom: 5px;
+  padding-left: 10px;
+}
+
+/* Sidebar styling */
+.asideabt {
+  background: rgba(0, 0, 0, 0);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  padding: 15px;
+  text-align: center;
+}
+
+.footer {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  color: white;
+  padding: 10px; /* Sesuaikan padding */
+  text-align: center;
+  margin-top: 20px; /* Jarak dari atas */
+  font-size: 10px; /* Ukuran font */
+  font-style: italic;
+  width: 100%; /* Footer memenuhi lebar kontainer */
+  position: relative; /* Posisi relatif agar footer muncul di bawah kontainer */
+  left: 0; /* Penjajaran */
+}
+
+@media screen and (max-width: 768px) {
   .container {
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    grid-gap: 20px;
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-    position: relative;
-  }
-
-  /* Menu styling */
-  .menu {
-    background: rgba(0, 0, 0, 0);
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    padding: 15px;
-    text-align: center;
-  }
-
-  .menu div {
+    grid-template-columns: 1fr;
     padding: 10px;
-    background-color: #eb94a2;
-    color: white;
-    margin: 10px 0;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    font-size: 14px;
-    box-shadow: 0 4px 8px rgba(214, 213, 213, 0.3);
-  }
-
-  .menu div:hover {
-    background-color: #663399;
-  }
-
-  .menu a {
-    color: white;
-    text-decoration: none;
-  }
-
-  /* Header and logos */
-  .header {
-    margin-bottom: 20px;
-    position: relative;
-    text-align: center;
   }
 
   .header img {
     width: 80px;
-    height: auto;
-    position: absolute;
-    top: -10px;
-  }
-
-  .header .center-logo {
-    left: 10px;
-    top: -5px;
-  }
-
-  .header .right-logo {
-    right: 10px;
-    top: -5px;
   }
 
   h1 {
-    font-size: 30px;
-    color: #ffc0cb;
-    margin: 20px 0;
-    text-align: center;
+    font-size: 24px;
   }
 
-  /* Separator line */
+  .footer {
+    font-size: 10px;
+  }
+
   .pembatas {
-    width: 100%;
-    height: 4px;
-    background: linear-gradient(to right, #b0c4de, #d3d3d3, #b0c4de);
-    box-shadow: 0 0 10px #ccc;
     margin: 10px 0;
   }
 
-  /* Main content styling */
-  .main-content {
-    text-align: center;
+  .asideabt {
+    margin-top: 20px; /* Added margin for mobile */
   }
-
-  /* Styling khusus untuk bagian About Me */
-  .about-section {
-    text-align: center;
-    padding: 40px;
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Box shadow for 3D effect */
-    max-width: 800px;
-    margin: 0 auto; /* Center the About Me section */
-  }
-
-  .about-section p,
-  .about-section ul,
-  .about-section ol {
-    font-size: 14px;
-    line-height: 1.6;
-    color: #ffffff;
-    text-align: justify; /* Align text both left and right */
-  }
-
-  .about-section h3,
-  .about-section h4,
-  .about-section h5,
-  .about-section h6 {
-    font-size: 20px;
-    margin-top: 20px; /* Increase top margin for better spacing */
-    margin-bottom: 10px;
-  }
-
-  /* Custom Styles for Ordered and Unordered Lists */
-  /* Unordered List (ul) Custom Bullets */
-  ul {
-    list-style-type: none;
-    padding-left: 20px;
-  }
-
-  ul li::before {
-    content: "• ";
-    color: #ffc0cb;
-    font-weight: bold;
-    display: inline-block;
-    width: 1em;
-    margin-left: -1em;
-  }
-
-  /* Ordered List (ol) Custom Style */
-  ol {
-    counter-reset: my-counter;
-    padding-left: 20px;
-  }
-
-  ol li {
-    counter-increment: my-counter;
-    margin-bottom: 10px;
-    padding: 5px;
-    position: relative;
-  }
-
-  ol li::before {
-    content: counter(my-counter) ". ";
-    color: #663399;
-    font-weight: bold;
-    display: inline-block;
-    width: 2em;
-    margin-right: 10px;
-    text-align: right;
-  }
-
-  /* Hover Effect */
-  ul li:hover,
-  ol li:hover {
-    background-color: rgba(255, 192, 203, 0.2);
-    border-radius: 5px;
-  }
-
-  /* List Styling for better spacing */
-  ul li,
-  ol li {
-    font-size: 14px;
-    line-height: 1.8;
-    margin-bottom: 5px;
-    padding-left: 10px;
-  }
-
-  /* Sidebar styling */
-  .aside {
-    background: rgba(
-      255,
-      255,
-      255,
-      0.1
-    ); /* Make the aside background semi-transparent */
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    padding: 15px;
-    text-align: center;
-  }
-
-  /* Footer styling */
-  .footer {
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    color: white;
-    padding: 5px; /* Smaller padding for footer */
-    text-align: center;
-    margin-top: 20px;
-    font-size: 10px; /* Adjusted font size for footer */
-    font-style: italic;
-    width: 100%;
-    position: relative;
-    left: 0;
-  }
-
-  @media screen and (max-width: 768px) {
-    .container {
-      grid-template-columns: 1fr;
-      padding: 10px;
-    }
-
-    .header img {
-      width: 80px;
-    }
-
-    h1 {
-      font-size: 24px;
-    }
-
-    .footer {
-      font-size: 10px;
-    }
-
-    .pembatas {
-      margin: 10px 0;
-    }
-
-   /* Styling untuk gambar PNG */
-   .png-image {
-display: block;
-margin: 30px auto; /* Jarak gambar dari elemen lainnya */
-width: 30px; /* Atur ukuran gambar PNG menjadi lebih kecil */
-border-radius: 10px; /* Opsional: Membuat sudut gambar menjadi lebih halus */
-}
-
 }
 
 /* Styling untuk teks judul lagu */
-.aside h3 {
-text-align: center; /* Pusatkan teks judul */
-margin-top: 20px; /* Jarak dari atas ke teks */
-font-size: 18px; /* Ukuran teks judul */
-color: #ffc0cb; /* Warna teks */
+.asideabt h3 {
+  text-align: center; /* Pusatkan teks judul */
+  margin-top: 20px; /* Jarak dari atas ke teks */
+  font-size: 18px; /* Ukuran teks judul */
+  color: #ffc0cb; /* Warna teks */
 }
 .audio-control {
-display: block;
-margin: 20px auto; /* Jarak antara gambar dan audio */
-width: 100%; /* Audio akan memenuhi lebar container */
-height: 25px; /* Tinggi kotak audio agar lebih tipis */
-padding: 0; /* Tidak ada padding tambahan */
-border: none; /* Menghilangkan border untuk tampilan lebih bersih */
-background: linear-gradient(
-to right,
-#b0c4de,
-#d3d3d3,
-#b0c4de
-); /* Silver gradient */
-box-shadow: 0 4px 15px #ccc(0, 0, 0, 0.3); /* 3D shadow effect lebih besar dan gelap */
-margin: 10px 0; /* Adjusted margin to move it higher */
-border-radius: 12px; /* Membuat sudut melengkung */
+  display: block;
+  margin: 20px auto; /* Jarak antara gambar dan audio */
+  width: 100%; /* Audio akan memenuhi lebar container */
+  height: 25px; /* Tinggi kotak audio agar lebih tipis */
+  padding: 0; /* Tidak ada padding tambahan */
+  border: none; /* Menghilangkan border untuk tampilan lebih bersih */
+  background: linear-gradient(
+    to right,
+    #b0c4de,
+    #d3d3d3,
+    #b0c4de
+  ); /* Silver gradient */
+  box-shadow: 0 4px 15px #ccc(0, 0, 0, 0.3); /* 3D shadow effect lebih besar dan gelap */
+  margin: 10px 0; /* Adjusted margin to move it higher */
+  border-radius: 12px; /* Membuat sudut melengkung */
 }
 
 .audio-control:hover {
-height: 30px; /* Sedikit lebih besar saat dihover */
-box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4); /* Shadow lebih besar saat dihover */
+  height: 30px; /* Sedikit lebih besar saat dihover */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4); /* Shadow lebih besar saat dihover */
 }
 
 /*STYLE MYHOLIDAY*/
 
 * {
-    box-sizing: border-box;
-  }
+  box-sizing: border-box;
+}
+body {
+  font-family: "Libre Baskerville", serif;
+  background-image: url("background.jpg");
+  background-size: 100% auto; /* Background akan menyesuaikan lebar layar */
+  background-position: top center; /* Fokus gambar di bagian atas tengah */
+  background-attachment: fixed; /* Background tidak bergerak saat di-scroll */
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+}
+
+/* Mobile View: Mengatur background agar lebih responsif */
+@media (max-width: 768px) {
   body {
-    font-family: "Libre Baskerville", serif;
-    background-image: url("background.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin: 0;
-    padding: 0;
-    color: #ffffff;
+    background-size: cover; /* Kembali ke 'cover' untuk layar kecil */
+    background-position: center; /* Fokus di tengah pada layar kecil */
   }
+}
 
+.container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Menu styling */
+.menu {
+  background: rgba(0, 0, 0, 0);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  padding: 15px;
+  text-align: center;
+}
+
+.menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  padding: 10px;
+  background-color: #eb94a2;
+  color: white;
+  margin: 10px 0;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-size: 14px;
+  box-shadow: 0 4px 8px rgba(214, 213, 213, 0.3);
+}
+
+.menu li:hover {
+  background-color: #663399;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Main content styling */
+.main-content {
+  text-align: center;
+}
+
+.header {
+  margin-bottom: 20px;
+  position: relative;
+  text-align: center;
+}
+
+.header img {
+  width: 80px;
+  max-width: 100%;
+  height: auto;
+  position: absolute;
+  top: -10px;
+}
+
+.header .center-logo {
+  left: 10px;
+  top: -5px;
+}
+
+.header .right-logo {
+  right: 10px;
+  top: -5px;
+}
+
+h1 {
+  font-size: 30px;
+  color: #ffc0cb;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.pembatas {
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(to right, #b0c4de, #d3d3d3, #b0c4de);
+  box-shadow: 0 0 10px #ccc;
+  margin: 10px 0;
+}
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center the images horizontally */
+  align-items: center;
+  gap: 16px; /* Space between the images */
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px 10px;
+}
+
+.gallery img {
+  width: calc(50% - 12px); /* 2 images per row */
+  aspect-ratio: 1 / 1; /* Ensure images are 1:1 */
+  object-fit: cover; /* Crop the image to fill the container */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Optional shadow */
+}
+
+/* Mobile View: 1 image per row */
+@media (max-width: 768px) {
+  .gallery img {
+    width: calc(100% - 12px); /* 1 image per row */
+  }
+}
+
+.gallery-message {
+  text-align: center;
+  margin-top: 20px; /* Space above the message */
+  font-size: 18px;
+  color: #ffc0cb; /* Match the theme color */
+}
+
+/* Sidebar styling */
+.asideholiday {
+  background-image: url("photosidebar2.jpg");
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  padding: 15px;
+  text-align: center;
+}
+/* Styling for the image */
+.asideholiday img {
+  width: 90%; /* Make the image fill the container */
+  height: 70%; /* Make the image fill the container height */
+  object-fit: cover; /* Ensure the image covers the container without distortion */
+  border-radius: 8px; /* Rounded corners */
+}
+
+/* Footer styling */
+.footer {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  color: white;
+  padding: 1px;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 8px;
+  font-style: italic;
+  width: 30%;
+}
+
+.footerAM {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  color: white;
+  padding: 1px;
+  text-align: center;
+  margin-top: 20px;
+  margin-left: 37px;
+  margin-right: 35px;
+  margin-bottom: 20px;
+  font-size: 8px;
+  font-style: italic;
+  width: 23%;
+}
+
+@media screen and (max-width: 768px) {
   .container {
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    grid-gap: 20px;
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-    position: relative;
-  }
-
-  /* Menu styling */
-  .menu {
-    background: rgba(0, 0, 0, 0);
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    padding: 15px;
-    text-align: center;
-  }
-
-  .menu ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  .menu li {
+    grid-template-columns: 1fr;
     padding: 10px;
-    background-color: #eb94a2;
-    color: white;
-    margin: 10px 0;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    font-size: 14px;
-    box-shadow: 0 4px 8px rgba(214, 213, 213, 0.3);
-  }
-
-  .menu li:hover {
-    background-color: #663399;
-  }
-
-  .menu a {
-    color: white;
-    text-decoration: none;
-  }
-
-  /* Main content styling */
-  .main-content {
-    text-align: center;
-  }
-
-  .header {
-    margin-bottom: 20px;
-    position: relative;
-    text-align: center;
   }
 
   .header img {
     width: 80px;
-    max-width: 100%;
-    height: auto;
-    position: absolute;
-    top: -10px;
-  }
-
-  .header .center-logo {
-    left: 10px;
-    top: -5px;
-  }
-
-  .header .right-logo {
-    right: 10px;
-    top: -5px;
   }
 
   h1 {
-    font-size: 30px;
-    color: #ffc0cb;
-    margin: 20px 0;
-    text-align: center;
-  }
-
-  .pembatas {
-    width: 100%;
-    height: 4px;
-    background: linear-gradient(
-      to right,
-      #b0c4de,
-      #d3d3d3,
-      #b0c4de
-    );
-    box-shadow: 0 0 10px #ccc;
-    margin: 10px 0;
-  }
-
-  .content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 40px 20px;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-
-  .content img {
-    max-width: 400px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-  }
-
-  .content-text {
-    max-width: 600px;
-    text-align: center;
-    margin: 0 auto;
-  }
-
-  h2 {
     font-size: 24px;
-    margin-bottom: 15px;
   }
 
-  p {
-    font-size: 16px;
-    line-height: 1.6;
-    margin: 0 20px;
-  }
-
-  /* Sidebar styling */
-  .aside {
-    background: rgba(0, 0, 0, 0);
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    padding: 15px;
-    text-align: center;
-  }
-
-  /* Footer styling */
   .footer {
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    color: white;
-    padding: 1px;
-    text-align: center;
-    margin-top: 20px;
-    font-size: 8px;
-    font-style: italic;
-    width: 100%;
-    position: relative;
-    left: 0;
+    font-size: 10px;
   }
 
-  @media screen and (max-width: 768px) {
-    .container {
-      grid-template-columns: 1fr;
-      padding: 10px;
-    }
-
-    .header img {
-      width: 80px;
-    }
-
-    h1 {
-      font-size: 24px;
-    }
-
-    .footer {
-      font-size: 10px;
-    }
-
-    .pembatas {
-      margin: 10px 0;
-    }
-
-    .aside {
-      margin-top: 20px;
-    }
-  }
-
-  .png-image {
-    display: block;
-    margin: 30px auto;
-    width: 150px;
-    border-radius: 10px;
-  }
-
-  .aside h3 {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 18px;
-    color: #ffc0cb;
-  }
-
-  .audio-control {
-    display: block;
-    margin: 20px auto;
-    width: 100%;
-    height: 25px;
-    padding: 0;
-    border: none;
-    background: linear-gradient(
-      to right,
-      #b0c4de,
-      #d3d3d3,
-      #b0c4de
-    );
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    border-radius: 12px;
-  }
-
-  .audio-control:hover {
-    height: 30px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
-  }
-
-  /*STYLE REGISTRATION*/
-
-  * {
-    box-sizing: border-box;
-  }
-  body {
-    font-family: "Libre Baskerville", serif;
-    background-image: url("background.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin: 0;
-    padding: 0;
-    color: #ffffff;
-  }
-
-  .container {
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    grid-gap: 20px;
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-    position: relative;
-  }
-
-  /* Menu styling */
-  .menu {
-    background: rgba(0, 0, 0, 0);
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    padding: 15px;
-    text-align: center;
-  }
-
-  .menu ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  .menu li {
-    padding: 10px;
-    background-color: #eb94a2;
-    color: white;
+  .pembatas {
     margin: 10px 0;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    font-size: 14px;
-    box-shadow: 0 4px 8px rgba(214, 213, 213, 0.3);
   }
 
-  .menu li:hover {
-    background-color: #663399;
+  .asideholiday {
+    margin-top: 20px; /* Added margin for mobile */
   }
+}
 
-  .menu a {
-    color: white;
-    text-decoration: none;
-  }
+/*STYLE REGISTRATION*/
 
-  /* Main content styling */
-  .main-content {
-    text-align: center;
-  }
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Libre Baskerville", serif;
+  background-image: url("background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+}
 
-  .header {
-    margin-bottom: 20px;
-    position: relative;
-    text-align: center;
+.container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-gap: 20px;
+  padding: 15px;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Menu styling */
+.menu {
+  background: rgba(0, 0, 0, 0);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  padding: 15px;
+  text-align: center;
+}
+
+.menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  padding: 10px;
+  background-color: #eb94a2;
+  color: white;
+  margin: 10px 0;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-size: 14px;
+  box-shadow: 0 4px 8px rgba(214, 213, 213, 0.3);
+}
+
+.menu li:hover {
+  background-color: #663399;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Main content styling */
+.main-content {
+  text-align: center;
+}
+
+.header {
+  margin-bottom: 20px;
+  position: relative;
+  text-align: center;
+}
+
+.header img {
+  width: 80px;
+  max-width: 100%;
+  height: auto;
+  position: absolute;
+  top: -10px;
+}
+
+.header .center-logo {
+  left: 10px;
+  top: -5px;
+}
+
+.header .right-logo {
+  right: 10px;
+  top: -5px;
+}
+
+h1 {
+  font-size: 30px;
+  color: #ffc0cb;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.pembatas {
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(to right, #b0c4de, #d3d3d3, #b0c4de);
+  box-shadow: 0 0 10px #ccc;
+  margin: 10px 0;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Styling untuk form dengan ukuran lebih kecil dan judul */
+.registrationForm {
+  background-color: #fff;
+  padding: 20px 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  max-width: 450px; /* Ukuran form lebih kecil */
+  width: 100%;
+  margin: 0 auto;
+}
+
+h2.form-title {
+  font-size: 24px;
+  color: #ffc0cb; /* Warna sesuai sebelumnya */
+  text-align: center;
+  margin-bottom: 30px;
+  font-family: "Libre Baskerville", serif; /* Font sesuai dengan yang digunakan sebelumnya */
+}
+
+.rForm-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  color: #333;
+  font-size: 14px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px; /* Ukuran font sedikit lebih kecil */
+  transition: border-color 0.2s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="date"]:focus,
+input[type="number"]:focus {
+  border-color: #6200ea;
+  outline: none;
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 12px;
+  font-size: 14px; /* Ukuran font tombol sedikit lebih kecil */
+  background-color: #6200ea;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 20px; /* Jarak antara tombol dan elemen di atasnya */
+}
+
+.btn-submit:hover {
+  background-color: #3700b3;
+}
+
+/* Sidebar styling */
+.aside {
+  background: rgba(0, 0, 0, 0);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  padding: 15px;
+  text-align: center;
+}
+
+/* Sidebar styling */
+.aside .box-container {
+  background: rgba(255, 255, 255, 0.15); /* Transparan */
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Bayangan halus */
+  max-width: 220px; /* Ukuran lebih kecil */
+  margin: 0 auto 15px; /* Center container */
+  text-align: center; /* Penataan teks kiri */
+}
+
+/* Heading style untuk sidebar */
+.aside .box-container h2 {
+  font-size: 16px;
+  color: #fffdfd;
+  margin-bottom: 12px;
+  font-family: "Libre Baskerville", serif;
+}
+
+/* Style untuk ikon dan teks di dalam container */
+.aside .box-container div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.aside .box-container div img {
+  width: 30px; /* Ukuran logo lebih kecil */
+  height: auto;
+  margin-right: 10px;
+}
+
+.aside .box-container a {
+  color: #fdccd4;
+  font-size: 14px;
+  text-decoration: none;
+  font-family: "Libre Baskerville", serif;
+}
+
+.aside .box-container a:hover {
+  color: #6200ea;
+}
+
+/* Footer styling */
+.footer {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  color: white;
+  padding: 1px;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 8px;
+  font-style: italic;
+  width: 100%;
+  position: relative;
+  left: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+    padding: 10px;
   }
 
   .header img {
     width: 80px;
-    max-width: 100%;
-    height: auto;
-    position: absolute;
-    top: -10px;
-  }
-
-  .header .center-logo {
-    left: 10px;
-    top: -5px;
-  }
-
-  .header .right-logo {
-    right: 10px;
-    top: -5px;
   }
 
   h1 {
-    font-size: 30px;
-    color: #ffc0cb;
-    margin: 20px 0;
-    text-align: center;
+    font-size: 24px;
+  }
+
+  .footer {
+    font-size: 10px;
   }
 
   .pembatas {
-    width: 100%;
-    height: 4px;
-    background: linear-gradient(to right, #b0c4de, #d3d3d3, #b0c4de);
-    box-shadow: 0 0 10px #ccc;
     margin: 10px 0;
   }
 
-  .content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 40px 20px;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-
-  /* Styling for the registration form */
-  .registrationForm {
-    background-color: #fff;
-    padding: 20px 40px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-    width: 100%;
-    margin: 0 auto;
-  }
-
-  h2 {
-    text-align: center;
-    color: #ffc0cb;
-    margin-bottom: 30px;
-  }
-
-  .rForm-group {
-    margin-top: 20px;
-  }
-
-  label {
-    display: block;
-    margin-bottom: 8px;
-    color: #757575;
-  }
-
-  input[type="text"],
-  input[type="tel"],
-  input[type="number"] {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #000000;
-    border-radius: 4px;
-    font-size: 16px;
-    transition: border-color 0.2s ease;
-    box-shadow: #0000008d;
-  }
-
-  input[type="text"]:focus,
-  input[type="tel"]:focus,
-  input[type="number"]:focus {
-    border-color: #6200ea;
-    outline: none;
-  }
-
-  .rForm-group .error {
-    color: red;
-    font-size: 12px;
-    margin-top: 5px;
-  }
-
-  .btn-submit {
-    width: 100%;
-    padding: 12px;
-    font-size: 16px;
-    background-color: #6200ea;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    margin-top: 30px; /* Jarak antara tombol dengan elemen di atasnya */
-  }
-
-  .btn-submit:hover {
-    background-color: #3700b3;
-  }
-
-  /* Sidebar styling */
   .aside {
-    background: rgba(0, 0, 0, 0);
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    padding: 15px;
-    text-align: center;
-  }
-
-  /* Footer styling */
-  .footer {
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    color: white;
-    padding: 1px;
-    text-align: center;
     margin-top: 20px;
-    font-size: 8px;
-    font-style: italic;
-    width: 100%;
-    position: relative;
-    left: 0;
   }
-
-  @media screen and (max-width: 768px) {
-    .container {
-      grid-template-columns: 1fr;
-      padding: 10px;
-    }
-
-    .header img {
-      width: 80px;
-    }
-
-    h1 {
-      font-size: 24px;
-    }
-
-    .footer {
-      font-size: 10px;
-    }
-
-    .pembatas {
-      margin: 10px 0;
-    }
-
-    .aside {
-      margin-top: 20px;
-    }
-  }
+}
