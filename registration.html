@@ -2,130 +2,219 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Registration Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Home - Photography Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="icon" href="logo.png" type="image/x-icon" />
-    <link rel="stylesheet" href="style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap"
       rel="stylesheet"
     />
   </head>
-
-  <body>
-    <div class="header">
-      <img src="logobintangtengah.png" alt="Logo" class="center-logo" />
-      <i
-        ><b><h1>~ Registration ~</h1></b></i
+  <body
+    class="font-serif bg-cover bg-center bg-no-repeat text-white"
+    style="background-image: url('background.jpg'); margin: 0; padding: 0"
+  >
+    <!-- Header Section -->
+    <header class="bg-transparent text-white shadow-md">
+      <div
+        class="container mx-auto px-4 py-2 flex items-center justify-between"
       >
-      <img src="logobintangtengah.png" alt="Small Logo" class="right-logo" />
-    </div>
-
-    <div class="pembatas"></div>
-
-    <div class="container">
-      <!-- Sidebar for navigation -->
-      <div class="menu">
-        <div><a href="index.html">Home</a></div>
-        <div><a href="about.html">About Me</a></div>
-        <div><a href="myHoliday.html">My Holiday</a></div>
-        <div><a href="registration.html">Registration</a></div>
+        <div class="flex items-center">
+          <img
+            src="logo.png"
+            alt="Site Logo"
+            class="w-20 h-auto rounded-full mr-3"
+          />
+          <i><h1 class="text-2xl font-bold-">Nalaya's Site</h1></i>
+        </div>
+        <!-- Hamburger Button for Mobile -->
+        <button id="hamburger" class="block md:hidden p-2 text-white">
+          <svg
+            class="h-6 w-6"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            />
+          </svg>
+        </button>
+        <!-- Navigation Menu -->
+        <nav
+          id="nav-menu"
+          class="hidden md:flex md:space-x-1 flex-col md:flex-row absolute md:static top-14 left-0 md:top-auto md:left-auto w-full md:w-auto bg-pink-500 md:bg-transparent shadow-2xl md:shadow-none z-10"
+        >
+          <ul
+            class="md:flex-row md:items-center flex flex-col md:space-x-1 text-center"
+          >
+            <li>
+              <div
+                class="bg-pink-300 hover:bg-purple-600 transition duration-300 rounded-md shadow-lg"
+              >
+                <a
+                  href="index.html"
+                  class="block py-1 md:py-1 text-white text-xs md:text-sm px-2 md:px-3"
+                  >Home</a
+                >
+              </div>
+            </li>
+            <li>
+              <div
+                class="bg-pink-300 hover:bg-purple-600 transition duration-300 rounded-md shadow-lg"
+              >
+                <a
+                  href="about.html"
+                  class="block py-1 md:py-1 text-white text-xs md:text-sm px-2 md:px-3"
+                  >About</a
+                >
+              </div>
+            </li>
+            <li>
+              <div
+                class="bg-pink-300 hover:bg-purple-600 transition duration-300 rounded-md shadow-lg"
+              >
+                <a
+                  href="gallery.html"
+                  class="block py-1 md:py-1 text-white text-xs md:text-sm px-2 md:px-3"
+                  >Gallery</a
+                >
+              </div>
+            </li>
+            <li>
+              <div
+                class="bg-pink-300 hover:bg-purple-600 transition duration-300 rounded-md shadow-lg"
+              >
+                <a
+                  href="calculator.html"
+                  class="block py-1 md:py-1 text-white text-xs md:text-sm px-2 md:px-3"
+                  >Calculator</a
+                >
+              </div>
+            </li>
+            <li>
+              <div
+                class="bg-pink-300 hover:bg-purple-600 transition duration-300 rounded-md shadow-lg"
+              >
+                <a
+                  href="registration.html"
+                  class="block py-1 md:py-1 text-white text-xs md:text-sm px-2 md:px-3"
+                  >Registration</a
+                >
+              </div>
+            </li>
+          </ul>
+        </nav>
       </div>
+    </header>
 
-      <div class="registrationForm">
-        <h2 class="form-title">Registration Form</h2>
-        <form action="process.php" method="POST">
-          <!-- Full Name -->
-          <div class="rForm-group">
-            <label for="full_name">Full Name</label>
-            <input type="text" id="full_name" name="full_name" required />
+    <!-- Pembatas (Separator) -->
+    <div
+      class="w-full h-1 bg-gradient-to-r from-blue-300 via-gray-300 to-blue-300 shadow-lg my-0 mx-auto"
+    ></div>
+
+    <!-- Main Content Section -->
+    <section class="py-12">
+      <div class="container mx-auto px-4">
+        <div class="main-content text-black mt-[-30px]">
+          <div class="about-section text-center">
+            <h2 class="text-3xl font-bold mb-4">
+              <span class="text-white">⋆ ˚｡⋆୨ </span> 
+              <i><span class="text-pink-300"> Registration Form </span></i>
+              <span class="text-white"> ୧⋆ ˚｡⋆</span>
+            </h2>
+
+           <!-- Sign Up Form -->
+<div class="max-w-sm w-full bg-red-200 p-6 rounded-lg shadow-md mx-auto mt-8 my-16">
+  <h2 class="text-3xl font-semibold text-center text-gray-700 mb-8">Sign Up</h2>
+  <form action="process.php" method="POST" onsubmit="return validateForm()">
+    
+    <div class="mb-6">
+      <label for="name" class="block text-sm text-gray-600 mb-2">Name</label>
+      <input type="text" id="name" name="name" maxlength="40" class="w-full p-3 border-2 border-zinc-500 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500" required>
+    </div>
+
+    <div class="mb-6">
+      <label for="phoneNumber" class="block text-sm text-gray-600 mb-2">Phone Number</label>
+      <input type="text" id="phoneNumber" name="phoneNumber" maxlength="15" class="w-full p-3 border-2 border-zinc-500 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500" required>
+    </div>
+
+    <div class="mb-6">
+      <label for="email" class="block text-sm text-gray-600 mb-2">Email</label>
+      <input type="email" id="email" name="email" class="w-full p-3 border-2 border-zinc-500 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500" required>
+    </div>
+
+    <div class="mb-6">
+      <label for="password" class="block text-sm text-gray-600 mb-2">Password</label>
+      <input type="password" id="password" name="password" class="w-full p-3 border-2 border-zinc-500	 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500" required>
+    </div>
+
+    <button type="submit" class="w-full py-3 bg-zinc-600	 text-white rounded-md text-lg hover:bg-zinc-500	 transition">Register</button>
+  </form>
+
+            </div>
           </div>
-
-          <!-- Birth Date -->
-          <div class="rForm-group">
-            <label for="birth_date">Birth Date</label>
-            <input type="date" id="birth_date" name="birth_date" required />
-          </div>
-
-          <!-- Phone Number -->
-          <div class="rForm-group">
-            <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" name="phone" required />
-          </div>
-
-          <!-- Email -->
-          <div class="rForm-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required />
-          </div>
-
-          <!-- Address -->
-          <div class="rForm-group">
-            <label for="address">Address</label>
-            <input type="text" id="address" name="address" required />
-          </div>
-
-          <!-- Town -->
-          <div class="rForm-group">
-            <label for="town">Town</label>
-            <input type="text" id="town" name="town" required />
-          </div>
-
-          <!-- Zip Code -->
-          <div class="rForm-group">
-            <label for="zip">Zip Code</label>
-            <input type="number" id="zip" name="zip" required />
-          </div>
-
-          <!-- Submit Button -->
-          <button type="submit" class="btn-submit">Submit</button>
-        </form>
+        </div>
       </div>
+    </section>
 
-     <!-- Right Sidebar with Follow Me, University Websites, and Favorite Websites -->
-<aside class="aside">
-  <!-- Follow Me Section -->
-  <div class="box-container">
-    <h2>Follow Me</h2>
-    <div>
-      <img src="logoig.png" alt="Instagram" />
-      <a href="https://instagram.com/alleniad.nia" target="_blank">@alleniad.nia</a>
-    </div>
-  </div>
-
-  <!-- University Websites Section -->
-  <div class="box-container">
-    <h2>University Websites</h2>
-    <div>
-      <img src="logofti.png" alt="FTI UNAI" />
-      <a href="https://fti.unai.edu" target="_blank">FTI UNAI</a>
-    </div>
-    <div>
-      <img src="logounai.png" alt="UNAI" />
-      <a href="https://unai.edu" target="_blank">UNAI</a>
-    </div>
-  </div>
-
-  <!-- My Favorite Websites Section -->
-  <div class="box-container">
-    <h2>My Favorite Websites</h2>
-    <div>
-      <img src="logounai.png" alt="Information Logo" />
-      <a href="https://online.unai.edu/" target="_blank">Information-Packed Website</a>
-    </div>
-    <div>
-      <img src="logopddikti.svg" alt="Scholarship Logo" />
-      <a href="https://pddikti.kemdikbud.go.id/" target="_blank">Websites That Provide Scholarships</a>
-    </div>
-    <div>
-      <img src="logoyt.png" alt="YouTube Logo" />
-      <a href="https://www.youtube.com/" target="_blank">Entertaining Website</a>
-    </div>
-  </div>
-</aside>
-
-    <footer class="footer">
-      <h3>don't be shy, click my insta and follow me😉</h3>
+    <footer class="bg-transparent text-white py-4 text-center">
+      <p class="text-xs">© 2024 Daniella Sabathini R. All rights reserved.</p>
     </footer>
+
+    <!-- JavaScript for Hamburger Menu -->
+    <script>
+      const hamburger = document.getElementById("hamburger");
+      const navMenu = document.getElementById("nav-menu");
+
+      hamburger.addEventListener("click", () => {
+        navMenu.classList.toggle("hidden");
+      });
+    </script>
+
+    <!-- JavaScript for Form Validation -->
+    <script>
+      function validateForm() {
+    // Validate Name
+    var name = document.getElementById("name").value;
+    if (name.length > 40) {
+        alert("Name must be a maximum of 40 characters.");
+        return false; // Prevent form submission
+    }
+
+    // Validate Phone Number
+    var phoneNumber = document.getElementById("phoneNumber").value;
+    var phonePattern = /^[0-9]{1,15}$/;
+    if (!phonePattern.test(phoneNumber)) {
+        alert("Phone Number must be numeric and a maximum of 15 digits.");
+        return false;
+    }
+
+    // Validate Email
+    var email = document.getElementById("email").value;
+    var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    if (!emailPattern.test(email)) {
+        alert("Please enter a valid email.");
+        return false;
+    }
+
+    // Validate Password
+    var password = document.getElementById("password").value;
+    var passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,16}$/;
+    if (!passwordPattern.test(password)) {
+        alert("Password must be between 8 and 16 characters and include at least one uppercase letter, one lowercase letter, and one number.");
+        return false;
+    }
+
+    // If all validations pass
+    alert("Registration Successful");
+    return true;
+}
+    </script>
   </body>
 </html>
