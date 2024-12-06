@@ -24,9 +24,9 @@
           <img
             src="logo.png"
             alt="Site Logo"
-            class="w-20 h-auto rounded-full mr-3"
+            class="w-12 sm:w-16 h-auto rounded-full mr-3"
           />
-          <i><h1 class="text-2xl font-bold-">Nalaya's Site</h1></i>
+          <i><h1 class="text-lg sm:text-2xl font-bold">Nalaya's Site</h1></i>
         </div>
         <!-- Hamburger Button for Mobile -->
         <button id="hamburger" class="block md:hidden p-2 text-white">
@@ -54,59 +54,39 @@
             class="md:flex-row md:items-center flex flex-col md:space-x-1 text-center"
           >
             <li>
-              <div
-                class="bg-pink-300 hover:bg-purple-600 transition duration-300 rounded-md shadow-lg"
+              <a
+                href="index.html"
+                class="block py-2 md:py-1 text-white text-sm px-3 bg-pink-300 hover:bg-purple-600 transition rounded-md shadow-lg"
+                >Home</a
               >
-                <a
-                  href="index.html"
-                  class="block py-1 md:py-1 text-white text-xs md:text-sm px-2 md:px-3"
-                  >Home</a
-                >
-              </div>
             </li>
             <li>
-              <div
-                class="bg-pink-300 hover:bg-purple-600 transition duration-300 rounded-md shadow-lg"
+              <a
+                href="about.html"
+                class="block py-2 md:py-1 text-white text-sm px-3 bg-pink-300 hover:bg-purple-600 transition rounded-md shadow-lg"
+                >About</a
               >
-                <a
-                  href="about.html"
-                  class="block py-1 md:py-1 text-white text-xs md:text-sm px-2 md:px-3"
-                  >About</a
-                >
-              </div>
             </li>
             <li>
-              <div
-                class="bg-pink-300 hover:bg-purple-600 transition duration-300 rounded-md shadow-lg"
+              <a
+                href="gallery.html"
+                class="block py-2 md:py-1 text-white text-sm px-3 bg-pink-300 hover:bg-purple-600 transition rounded-md shadow-lg"
+                >Gallery</a
               >
-                <a
-                  href="gallery.html"
-                  class="block py-1 md:py-1 text-white text-xs md:text-sm px-2 md:px-3"
-                  >Gallery</a
-                >
-              </div>
             </li>
             <li>
-              <div
-                class="bg-pink-300 hover:bg-purple-600 transition duration-300 rounded-md shadow-lg"
+              <a
+                href="calculator.html"
+                class="block py-2 md:py-1 text-white text-sm px-3 bg-pink-300 hover:bg-purple-600 transition rounded-md shadow-lg"
+                >Calculator</a
               >
-                <a
-                  href="calculator.html"
-                  class="block py-1 md:py-1 text-white text-xs md:text-sm px-2 md:px-3"
-                  >Calculator</a
-                >
-              </div>
             </li>
             <li>
-              <div
-                class="bg-pink-300 hover:bg-purple-600 transition duration-300 rounded-md shadow-lg"
+              <a
+                href="registration.html"
+                class="block py-2 md:py-1 text-white text-sm px-3 bg-pink-300 hover:bg-purple-600 transition rounded-md shadow-lg"
+                >Registration</a
               >
-                <a
-                  href="registration.html"
-                  class="block py-1 md:py-1 text-white text-xs md:text-sm px-2 md:px-3"
-                  >Registration</a
-                >
-              </div>
             </li>
           </ul>
         </nav>
@@ -123,40 +103,71 @@
       <div class="container mx-auto px-4">
         <div class="main-content text-black mt-[-30px]">
           <div class="about-section text-center">
-            <h2 class="text-3xl font-bold mb-4">
-              <span class="text-white">⋆ ˚｡⋆୨ </span> 
-              <i><span class="text-pink-300"> Registration Form </span></i>
+            <h2 class="text-2xl sm:text-3xl font-bold mb-4">
+              <span class="text-white">⋆ ˚｡⋆୨ </span>
+              <i><span class="text-pink-300">Registration Form</span></i>
               <span class="text-white"> ୧⋆ ˚｡⋆</span>
             </h2>
 
-           <!-- Sign Up Form -->
-<div class="max-w-sm w-full bg-red-200 p-6 rounded-lg shadow-md mx-auto mt-8 my-16">
-  <h2 class="text-3xl font-semibold text-center text-gray-700 mb-8">Sign Up</h2>
-  <form action="process.php" method="POST" onsubmit="return validateForm()">
-    
-    <div class="mb-6">
-      <label for="name" class="block text-sm text-gray-600 mb-2">Name</label>
-      <input type="text" id="name" name="name" maxlength="40" class="w-full p-3 border-2 border-zinc-500 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500" required>
-    </div>
+            <!-- Sign Up Form -->
+            <div class="max-w-xs sm:max-w-sm w-full bg-red-200 p-4 sm:p-6 rounded-lg shadow-md mx-auto mt-8">
+              <h2 class="text-2xl sm:text-3xl font-semibold text-center text-gray-700 mb-8">
+                Sign Up
+              </h2>
+              <form action="process.php" method="POST" onsubmit="return validateForm()">
+                <div class="mb-4 sm:mb-6">
+                  <label for="name" class="block text-sm text-gray-600 mb-2">Name</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    maxlength="40"
+                    class="w-full p-2 sm:p-3 border-2 border-zinc-500 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500"
+                    required
+                  />
+                </div>
 
-    <div class="mb-6">
-      <label for="phoneNumber" class="block text-sm text-gray-600 mb-2">Phone Number</label>
-      <input type="text" id="phoneNumber" name="phoneNumber" maxlength="15" class="w-full p-3 border-2 border-zinc-500 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500" required>
-    </div>
+                <div class="mb-4 sm:mb-6">
+                  <label for="phoneNumber" class="block text-sm text-gray-600 mb-2">Phone Number</label>
+                  <input
+                    type="text"
+                    id="phoneNumber"
+                    name="phoneNumber"
+                    maxlength="15"
+                    class="w-full p-2 sm:p-3 border-2 border-zinc-500 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500"
+                    required
+                  />
+                </div>
 
-    <div class="mb-6">
-      <label for="email" class="block text-sm text-gray-600 mb-2">Email</label>
-      <input type="email" id="email" name="email" class="w-full p-3 border-2 border-zinc-500 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500" required>
-    </div>
+                <div class="mb-4 sm:mb-6">
+                  <label for="email" class="block text-sm text-gray-600 mb-2">Email</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="w-full p-2 sm:p-3 border-2 border-zinc-500 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500"
+                    required
+                  />
+                </div>
 
-    <div class="mb-6">
-      <label for="password" class="block text-sm text-gray-600 mb-2">Password</label>
-      <input type="password" id="password" name="password" class="w-full p-3 border-2 border-zinc-500	 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500" required>
-    </div>
+                <div class="mb-4 sm:mb-6">
+                  <label for="password" class="block text-sm text-gray-600 mb-2">Password</label>
+                  <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    class="w-full p-2 sm:p-3 border-2 border-zinc-500 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500"
+                    required
+                  />
+                </div>
 
-    <button type="submit" class="w-full py-3 bg-zinc-600	 text-white rounded-md text-lg hover:bg-zinc-500	 transition">Register</button>
-  </form>
-
+                <button
+                  type="submit"
+                  class="w-full py-2 sm:py-3 bg-zinc-600 text-white rounded-md text-lg hover:bg-zinc-500 transition"
+                >
+                  Register
+                </button>
+              </form>
             </div>
           </div>
         </div>
@@ -176,45 +187,6 @@
         navMenu.classList.toggle("hidden");
       });
     </script>
-
-    <!-- JavaScript for Form Validation -->
-    <script>
-      function validateForm() {
-    // Validate Name
-    var name = document.getElementById("name").value;
-    if (name.length > 40) {
-        alert("Name must be a maximum of 40 characters.");
-        return false; // Prevent form submission
-    }
-
-    // Validate Phone Number
-    var phoneNumber = document.getElementById("phoneNumber").value;
-    var phonePattern = /^[0-9]{1,15}$/;
-    if (!phonePattern.test(phoneNumber)) {
-        alert("Phone Number must be numeric and a maximum of 15 digits.");
-        return false;
-    }
-
-    // Validate Email
-    var email = document.getElementById("email").value;
-    var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-    if (!emailPattern.test(email)) {
-        alert("Please enter a valid email.");
-        return false;
-    }
-
-    // Validate Password
-    var password = document.getElementById("password").value;
-    var passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,16}$/;
-    if (!passwordPattern.test(password)) {
-        alert("Password must be between 8 and 16 characters and include at least one uppercase letter, one lowercase letter, and one number.");
-        return false;
-    }
-
-    // If all validations pass
-    alert("Registration Successful");
-    return true;
-}
-    </script>
+    <script src="form-validation.js"></script>
   </body>
 </html>
